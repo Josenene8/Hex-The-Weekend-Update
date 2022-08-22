@@ -47,11 +47,12 @@ class HexMenuData
 			path = dataPath;
 			#if windows
 			Debug.logTrace("loading " + path);
-			var jsonShit = sys.io.File.getContent(FileSystem.absolutePath(dataPath));
+			#end
+			var jsonShit = sys.io.File.getContent(SUtil.getPath() + FileSystem.absolutePath(dataPath));
 			var jsonData = Json.parse(jsonShit);
 
 			data = cast jsonData;
-			#end
+			
 		}
 	}
 }
