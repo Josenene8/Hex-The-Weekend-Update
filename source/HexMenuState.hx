@@ -49,8 +49,9 @@ class HexMenuData
 			Debug.logTrace("loading " + path);
 			var jsonShit = sys.io.File.getContent(FileSystem.absolutePath(dataPath));
 			var jsonData = Json.parse(jsonShit);
-			#end
+
 			data = cast jsonData;
+			#end
 		}
 	}
 }
