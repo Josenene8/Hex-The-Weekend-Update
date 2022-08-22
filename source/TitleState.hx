@@ -50,7 +50,8 @@ class TitleState extends MusicBeatState
 	{
 		MasterObjectLoader.mutex = new Mutex();
 		// TODO: Refactor this to use OpenFlAssets.
-		#if FEATURE_FILESYSTEM
+		
+		#if windows
 		if (!sys.FileSystem.exists(Sys.getCwd() + "/assets/replays"))
 			sys.FileSystem.createDirectory(Sys.getCwd() + "/assets/replays");
 		#end
